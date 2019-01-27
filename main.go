@@ -15,6 +15,7 @@ func main() {
 
 	// Init the route
 	router := httprouter.New()
+	handler.Init()
 	handler.Route(router)
 
 	// Listen and serve the server
