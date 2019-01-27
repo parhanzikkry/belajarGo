@@ -7,6 +7,6 @@ import (
 )
 
 func Route(router *httprouter.Router) {
-	router.GET("/article/:article_id", middlewares.SetHeader())
-	router.GET("/articel/all", middlewares.SetHeader())
+	router.GET("/article/:article_id", middlewares.SetHeader(GetArticleById))
+	router.GET("/articel/all", middlewares.SetHeader(GetAllArticle))
 }
